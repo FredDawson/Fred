@@ -1,0 +1,27 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <script type="text/javascript">
+        function getFortune(){
+        let fortune = ["You will die today","You will find luck in a bar","Try to eat less fat or you will be sad"];
+          let rand = Math.round(Math.round(Math.random()*10)/4);
+          console.log(rand);
+          console.log(fortune[rand]);
+          console.log(document.getElementById("test"));
+          document.getElementById("test").innerHTML = fortune[rand];
+      }
+      function load(){
+        document.getElementById("fortune").addEventListener("click", getFortune);
+      }
+        </script>
+    </head>
+    <body onload="load()">
+
+      <button id="fortune">Hello</button>
+      <p id="test"></p>
+
+    </body>
+</html>
